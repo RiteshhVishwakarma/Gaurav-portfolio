@@ -1,0 +1,91 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    background-color: #090707;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main {
+    background-color: rgb(153, 0, 255);
+    width: 90%; /* Use percentage for responsiveness */
+    max-width: 50rem; /* Set a max width */
+    height: auto; /* Allow height to adjust */
+    padding: 2rem; /* Add padding for spacing */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 8px solid rgb(255, 255, 179);
+    border-radius: 1rem; /* Use rem for border radius */
+    text-align: center; /* Center text */
+}
+
+#image {
+    width: 10rem; /* Adjust for responsiveness */
+    height: 10rem; /* Adjust for responsiveness */
+}
+
+#image img {
+    height: 100%;
+    width: 100%;
+    border: 8px solid rgb(255, 255, 179);
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+#image img:hover {
+    transform: scale(1.1);
+}
+
+h1 {
+    color: yellow;
+    font-size: 2.5rem; /* Adjust font size */
+}
+
+p {
+    color: yellow;
+    font-size: 1.5rem; /* Adjust font size */
+    line-height: 1.5; /* Adjust line height */
+}
+
+.typewriter h1 {
+    font-size: 1rem;
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: typing 4s steps(30, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: orange; }
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem; /* Smaller font size for mobile */
+    }
+
+
+
+    #image {
+        width: 8rem; /* Smaller image size for mobile */
+        height: 8rem; /* Smaller image size for mobile */
+    }
+}
